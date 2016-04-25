@@ -1,0 +1,11 @@
+{
+  "name": "aframetest",
+  "version": "1.0.0",
+  "description": "Learning how to use aFrame",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Ian deBoisblanc",
+  "license": "MIT"
+}
