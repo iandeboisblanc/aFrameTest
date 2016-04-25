@@ -6,12 +6,26 @@
   </head>
   <body>
     <a-scene>
+
       <a-assets>
         <img id='factoryTexture' src="factory.png">
+        <img id='cloudTexture' src="cloudBackground.png">
       </a-assets>
+
       <a-box color="#FFF" width="10" height="10" depth="10" 
         position='0 5 -15' rotation='0 45 0'
-        src='#factoryTexture'/>
+        src='#factoryTexture'>
+        <a-animation attribute='rotation' begin='click' from='0 45 0' to='0 135 0' /> 
+      </a-box>
+
+      <!-- <a-light type="spot" color="#FFF" position="10 0 30" look-at="a-box"></a-light> -->
+
+      <a-sky src="#cloudTexture"></a-sky>
+
+      <a-camera position="0 1.8 0">
+        <a-cursor color="#2E3A87">
+    </a-camera>
+
     </a-scene>
   </body>
 </html>
