@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AFrameTest</title>
+    <script type="text/javascript" src='node_modules/aframe/dist/aframe.js'></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id='factoryTexture' src="factory.png">
+      </a-assets>
+      <a-box color="#FFF" width="10" height="10" depth="10" 
+        position='0 5 -15' rotation='0 45 0'
+        src='#factoryTexture'/>
+    </a-scene>
+  </body>
+</html>

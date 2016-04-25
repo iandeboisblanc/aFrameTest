@@ -4,8 +4,14 @@
   "description": "Learning how to use aFrame",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon app.js"
   },
   "author": "Ian deBoisblanc",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "aframe": "^0.2.0",
+    "express": "^4.13.4",
+    "nodemon": "^1.9.1"
+  }
 }
