@@ -87,6 +87,7 @@ AFRAME.registerComponent('collider', {
     var el = this.el;
     var mesh = el.getObject3D('mesh');
     var object3D = el.object3D;
+    object3D.updateMatrixWorld();
     var raycaster;
     var vertices = mesh.geometry.vertices;
     var bottomVertex = vertices[0].clone();
@@ -103,7 +104,7 @@ AFRAME.registerComponent('collider', {
     raycaster = new THREE.Raycaster(bottomVertex, directionVector, 1);
     collisionResults = raycaster.intersectObjects(this.targets, true);
     collisionResults.forEach(function (target) {
-      // Tell collided entity about the collision.
+      // Tell collided entity about the collision.c]
       target.object.el.emit('collider-hit', {target: el});
     });
   }
