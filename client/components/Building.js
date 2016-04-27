@@ -12,8 +12,8 @@ class Building extends React.Component {
   render () {
     return (
       <Entity position={this.props.position} rotation={this.props.rotation} 
-        geometry='primitive: box; width:10; height:10; depth:10'
-        material='src: #factoryTexture'>
+        geometry={{primitive:'box', width:10, height:10, depth:10}}
+        material={{src:'#factoryTexture'}}>
       </Entity>
     );
   }

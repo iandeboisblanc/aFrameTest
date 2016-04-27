@@ -3,10 +3,11 @@ require('aframe');
 // require('aframe-template-component');
 import React from 'react';
 import {render} from 'react-dom';
-import {Scene, Entity, Assets} from 'aframe-react';
+import {Scene, Entity} from 'aframe-react';
 import Player from './Player';
 import Laser from './Laser';
 import Building from './Building';
+import Enemy from './Enemy';
 
 class ExampleScene extends React.Component {
   render () {
@@ -21,15 +22,9 @@ class ExampleScene extends React.Component {
 
         <Building position='-10 5 -15' rotation='0 45 0'/>
 
+        <Enemy position='-2 1.8 -10'/>
+
         <a-plane position='0 0 0' rotation='-90 0 0' height='20' width='20' color='#555'></a-plane>
-
-        <a-image position="0 1.8 -4" class='enemy' height='3.6' width='2' look-at='#player' src='#enemy-sprite' transparent='true'>
-          <a-animation attribute='opacity' begin='collider-hit' dur='400' ease='linear'
-            from='1' to='0'></a-animation>
-          <a-animation attribute='scale' begin='collider-hit' dur='400' ease='linear'
-            to='0 0 0'></a-animation>
-        </a-image>
-
         <a-sky src='#cloudTexture'></a-sky>
 
         <Player/>
